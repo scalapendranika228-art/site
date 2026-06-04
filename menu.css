@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#fff7fa;
+  overflow-x:hidden;
+  font-family:Georgia, serif;
+}
+
+/* шапка */
+
+header{
+  width:100%;
+  height:120px;
+  background:white;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.logo{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  top:15px;
+  z-index:100;
+}
+
+.logo img{
+  width:150px;
+}
+
+.nav{
+  width:100%;
+  max-width:1400px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 50px;
+}
+
+.nav-left,
+.nav-right{
+  display:flex;
+  gap:60px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#2d120f;
+  font-size:24px;
+  font-family:'Lobster', cursive;
+  transition:0.3s;
+}
+
+.nav a:hover{
+  color:#d98aac;
+}
+
+
+/* главнй блок хиро */
+
+.menu-hero{
+  width:100%;
+  padding:140px 20px 120px;
+  text-align:center;
+
+  background:
+  repeating-linear-gradient(
+    90deg,
+    #ffbed6 0px,
+    #ffbed6 90px,
+    #ffd3e3 90px,
+    #ffd3e3 180px
+  );
+}
+
+.menu-hero h1{
+  font-family:'Lobster', cursive;
+  font-size:90px;
+  color:white;
+  margin-bottom:20px;
+}
+
+.menu-hero p{
+  color:white;
+  font-size:34px;
+}
+
+/* категории */
+
+.categories{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+  padding:70px 20px;
+  background:#fff7fa;
+}
+
+.category-btn{
+  border:none;
+  padding:20px 45px;
+  border-radius:50px;
+  background:#FFBED6;
+  color:white;
+  font-size:30px;
+  font-family:'Lobster', cursive;
+  cursor:pointer;
+  transition:0.4s;
+}
+
+.category-btn:hover{
+  transform:translateY(-8px);
+  background:#f89fbe;
+  box-shadow:0 10px 25px rgba(255,190,214,0.5);
+}
+
+/* все что в меню */
+
+.menu-items{
+  width:100%;
+  padding:50px 100px 150px;
+}
+
+.menu-card{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:80px;
+  margin-bottom:140px;
+
+  opacity:0;
+  transform:translateY(60px);
+
+  animation:fadeUp 1s forwards;
+}
+
+.reverse{
+  flex-direction:row-reverse;
+}
+
+.menu-image{
+  flex:1;
+}
+
+.menu-image img{
+  width:100%;
+  max-width:550px;
+
+  transition:0.5s;
+}
+
+.menu-image img:hover{
+  transform:scale(1.05) rotate(-2deg);
+}
+
+.menu-info{
+  flex:1;
+}
+
+.menu-info h2{
+  font-family:'Lobster', cursive;
+  font-size:75px;
+  color:#4b1d16;
+  margin-bottom:25px;
+}
+
+.menu-info p{
+  font-size:30px;
+  line-height:1.7;
+  color:#4b1d16;
+  margin-bottom:30px;
+}
+
+.menu-info span{
+  display:block;
+  font-size:45px;
+  color:#FFBED6;
+  margin-bottom:40px;
+  font-family:'Lobster', cursive;
+}
+
+.order-btn{
+  display:inline-block;
+  padding:22px 45px;
+  background:#FFBED6;
+  border-radius:50px;
+
+  text-decoration:none;
+  color:white;
+
+  font-size:30px;
+  font-family:'Lobster', cursive;
+
+  transition:0.4s;
+}
+
+.order-btn:hover{
+  background:#f59ebf;
+  transform:translateY(-5px);
+  box-shadow:0 12px 30px rgba(255,190,214,0.5);
+}
+
+/* анимация */
+
+@keyframes fadeUp{
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media(max-width:1100px){
+
+  .menu-card,
+  .reverse{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .menu-info h2{
+    font-size:55px;
+  }
+
+  .menu-info p{
+    font-size:24px;
+  }
+
+  .menu-items{
+    padding:50px 30px 120px;
+  }
+}
+
+@media(max-width:768px){
+
+  .nav{
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+  }
+
+  .nav-left,
+  .nav-right{
+    gap:20px;
+  }
+
+  header{
+    height:auto;
+    padding:30px 0;
+  }
+
+  .menu-hero h1{
+    font-size:60px;
+  }
+
+  .category-btn{
+    width:100%;
+    max-width:300px;
+  }
+
+  .menu-info h2{
+    font-size:42px;
+  }
+
+  .menu-info span{
+    font-size:35px;
+  }
+
+  .order-btn{
+    font-size:24px;
+  }
+}
+.menu-card{
+  transition:0.5s;
+}
+
+.category-btn.active{
+  background:#f59ebf;
+  transform:scale(1.05);
+  box-shadow:0 10px 25px rgba(255,190,214,0.5);
+}

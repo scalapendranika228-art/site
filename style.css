@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#f8f1ef;
+  font-family: Georgia, serif;
+  overflow-x:hidden;
+}
+
+/* HEADER  */
+
+header{
+  width:100%;
+  height:120px;
+  background:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+
+.nav{
+  width:100%;
+  max-width:1400px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 50px;
+}
+
+.nav-left,
+.nav-right{
+  display:flex;
+  gap:60px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:#2d120f;
+  font-size:24px;
+  font-family:'Lobster', cursive;
+  transition:0.3s;
+}
+
+.nav a:hover{
+  color:#d98aac;
+}
+
+.logo{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  top:20px;
+  z-index:100;
+}
+
+.logo img{
+  width:160px;
+}
+
+.logo img{
+  width:170px;
+  height:auto;
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero{
+  width:100%;
+  height:700px;
+  background:
+  repeating-linear-gradient(
+    90deg,
+    #ffbed6 0px,
+    #ffbed6 90px,
+    #ffd3e3 90px,
+    #ffd3e3 180px
+  );
+
+  position:relative;
+  overflow:visible;
+}
+
+.hero-content{
+  max-width:1400px;
+  margin:0 auto;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 80px;
+}
+
+.hero h1{
+  font-family:'Lobster', cursive;
+  font-size:90px;
+  color:#fff;
+  line-height:1.2;
+  max-width:650px;
+}
+
+.donut-image{
+  position:absolute;
+  right:180px;
+  bottom:-120px;
+  z-index:5;
+}
+
+.donut-image img{
+  width:650px;
+}
+
+/* Блок  */
+
+.services{
+  padding:90px 20px 120px;
+  background:#f8f1ef;
+  text-align:center;
+}
+
+.services h2{
+  font-family:'Lobster', cursive;
+  font-size:64px;
+  color:#4e221b;
+  margin-bottom:10px;
+}
+
+.services span{
+  display:block;
+  font-size:64px;   
+  color:#f0a7c3;
+  margin-top:10px;
+}
+
+.cards{
+  margin-top:70px;
+  display:flex;
+  justify-content:center;
+  gap:80px;
+  flex-wrap:wrap;
+}
+
+.card{
+  width:320px;
+  height:370px;
+  background:#fff;
+  border:5px solid #f0b4cb;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card.pink{
+  background:#efb7cf;
+  color:#fff;
+}
+
+.icon-circle{
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  background:#f4b9d0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:30px;
+}
+
+.card.pink .icon-circle{
+  background:#fff;
+}
+
+.icon-circle img{
+  width:90px;
+}
+
+.card h3{
+  font-family:'Lobster', cursive;
+  font-size:55px;
+  color:#f0a7c3;
+  margin-bottom:10px;
+}
+
+.card.pink h3{
+  color:#fff;
+}
+
+.card p{
+  font-size:32px;
+  color:#2d120f;
+}
+
+.card.pink p{
+  color:#fff;
+}
+
+/* Блок 2 */
+
+.about{
+  width:100%;
+  height:900px;
+  background:
+  repeating-linear-gradient(
+    90deg,
+    #ffbed6 0px,
+    #ffbed6 90px,
+    #ffd3e3 90px,
+    #ffd3e3 180px
+  );
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
+
+.about-box{
+  width:560px;
+  background:#f8f1ef;
+  padding:60px;
+  position:relative;
+  z-index:2;
+}
+
+.about-box::after{
+  content:'';
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:#f5e4dc;
+  top:20px;
+  left:20px;
+  z-index:-1;
+}
+
+.about-box h2{
+  font-family:'Lobster', cursive;
+  font-size:58px;
+  color:#4e221b;
+  margin-bottom:40px;
+  text-align:center;
+}
+
+.about-box p{
+  font-size:33px;
+  line-height:1.8;
+  color:#2d120f;
+  text-align:center;
+}
+
+/* Подвал */
+.footer-text{
+  width:100%;
+  height:700px;
+
+  background:
+  repeating-linear-gradient(
+    90deg,
+    #ffbed6 0px,
+    #ffbed6 90px,
+    #ffd3e3 90px,
+    #ffd3e3 180px
+  );
+
+  position:relative;
+
+  display:flex;
+  flex-direction:column;
+
+  align-items:center;
+  justify-content:flex-start;
+
+  overflow:hidden;
+
+  padding-top:40px;
+}
+
+.footer-text h2{
+  font-family:'Lobster', cursive;
+  color:#ffffff;
+  font-size:65px;
+
+  text-align:center;
+
+  margin-bottom:40px;
+}
+
+.footer-img{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  width:100%;
+}
+
+.footer-img img{
+  width:420px;
+  max-width:100%;
+
+  object-fit:contain;
+}
+
+/* заказики */
+
+.custom-desserts{
+  width:100%;
+  padding:140px 60px;
+  background:#fff;
+  text-align:center;
+}
+
+.custom-top{
+  max-width:950px;
+  margin:0 auto 90px;
+}
+
+.custom-top h2{
+  font-family:'Lobster', cursive;
+  font-size:75px;
+  color:#4b1d16;
+  margin-bottom:40px;
+}
+
+.custom-top p{
+  font-size:30px;
+  line-height:1.9;
+  color:#4b1d16;
+}
+
+.custom-cakes{
+  display:flex;
+  justify-content:center;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+.cake-example{
+  width:320px;
+  background:#fff7fa;
+  border-radius:30px;
+  padding:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+  transition:0.4s;
+}
+
+.cake-example:hover{
+  transform:translateY(-10px);
+}
+
+.middle{
+  transform:translateY(40px);
+}
+
+.middle:hover{
+  transform:translateY(20px);
+}
+
+.cake-example img{
+  width:100%;
+  border-radius:20px;
+  margin-bottom:25px;
+}
+
+.cake-example h3{
+  font-family:'Lobster', cursive;
+  color:#4b1d16;
+  font-size:38px;
+  margin-bottom:20px;
+}
+
+.cake-example button{
+  border:none;
+  background:#FFBED6;
+  color:white;
+  padding:14px 35px;
+  border-radius:40px;
+  cursor:pointer;
+
+  font-family:'Lobster', cursive;
+  font-size:24px;
+
+  transition:0.3s;
+}
+
+.cake-example button:hover{
+  background:#f69abb;
+}
+
+
+
+.services{
+  width:100%;
+  padding:140px 40px;
+  background:#fff7fa;
+  text-align:center;
+}
+
+.services-title h2{
+  font-family:'Lobster', cursive;
+  font-size:80px;
+  color:#4b1d16;
+}
+
+.services-title span{
+  font-family:'Lobster', cursive;
+  font-size:60px;
+  color:#FFBED6;
+}
+
+.services-icons{
+  margin-top:80px;
+
+  display:flex;
+  justify-content:center;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+.service-card{
+  width:300px;
+
+  background:#FFBED6;
+
+  border-radius:30px;
+
+  padding:40px 25px;
+
+  text-decoration:none;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+  transition:0.4s;
+}
+
+.service-card:hover{
+  transform:translateY(-10px);
+}
+
+.middle-card{
+  transform:translateY(40px);
+}
+
+.middle-card:hover{
+  transform:translateY(20px);
+}
+
+.service-card img{
+  width:120px;
+  margin-bottom:25px;
+}
+
+.service-card h3{
+  font-family:'Lobster', cursive;
+  color:white;
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.service-card p{
+  color:white;
+  font-size:24px;
+}
+
+
+.pink-card{
+  background:#FFBED6;
+}
+
+.pink-card h3,
+.pink-card p{
+  color:white;
+}
+
+.white-card{
+  background:white;
+}
+
+.white-card h3{
+  color:#FFBED6;
+}
+
+.white-card p{
+  color:#4b1d16;
+}
+/* доп. инфа */
+
+.info-section{
+  width:100%;
+  min-height:850px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  background:white;
+
+  padding:0 80px;
+
+  overflow:hidden;
+}
+
+.reverse-section{
+  flex-direction:row-reverse;
+}
+
+.info-text{
+  width:45%;
+}
+
+.info-text h2{
+  font-family:'Lobster', cursive;
+  font-size:75px;
+  color:#4b1d16;
+
+  margin-bottom:40px;
+}
+
+.info-text p{
+  font-size:30px;
+  line-height:2;
+  color:#4b1d16;
+}
+
+.info-image{
+  width:45%;
+  height:700px;
+}
+
+.info-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  border-radius:40px;
+}
+
+/* ---------------- SMOOTH SCROLL ---------------- */
+
+html{
+  scroll-behavior:smooth;
+}
